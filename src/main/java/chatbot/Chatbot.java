@@ -148,20 +148,20 @@ public class Chatbot {
                 findAlerta(user);
             } else if (type[0].equals("estado_sensor")) {
                 user.ClearSensor();
-                findEstado_sensores(user);
                 if (type.length > 1) {
                     user.setSensor(user.getSensors().find(type[1]));
                 }
+                findEstado_sensores(user);
             } else if (type[0].equals("pregunta_alerta")) {
-                findEstado_sensores(user);
                 if (type.length > 1) {
                     user.setSensor(user.getSensors().find(type[1]));
                 }
+                findAlerta(user);
             } else if (type[0].equals("modificar_sensor")) {
-                findEstado_sensores(user);
                 if (type.length > 1) {
                     user.setSensor(user.getSensors().find(type[1]));
                 }
+                findModificar_sensor(user);
             }
         } else if (userUtterance.length() != 0) {
             System.out.println("userUtterance: " + userUtterance);
