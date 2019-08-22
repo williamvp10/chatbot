@@ -94,7 +94,7 @@ public class Chatbot {
                 userName = infouser.get("first_name").getAsString();
                 this.Usuarios.put(userid, new Usuario(userid, userName));
             }else{
-                 this.Usuarios.put(userid, new Usuario(userid, "william"));
+                 this.Usuarios.put(userid, new Usuario(userid, "William"));
             }
             System.out.println("user"+infouser);
         }
@@ -423,7 +423,7 @@ public class Chatbot {
                     e.add("url", new JsonPrimitive("https://www.pce-instruments.com/espanol/slot/4/artimg/large/pce-instruments-sensor-de-temperatura-pce-ir-57-5638928_957363.jpg"));
                     b = new JsonObject();
                     b1 = new JsonArray();
-                    b.add("titulo", new JsonPrimitive("Ver Más"));
+                    b.add("titulo", new JsonPrimitive("Visualizar"));
                     String var = "" + obj.get("id").getAsString();
                     b.add("respuesta", new JsonPrimitive("estado_sensor:" + var));
                     b1.add(b);
@@ -453,7 +453,7 @@ public class Chatbot {
                 e.add("url", new JsonPrimitive("https://www.pce-instruments.com/espanol/slot/4/artimg/large/pce-instruments-sensor-de-temperatura-pce-ir-57-5638928_957363.jpg"));
                 b = new JsonObject();
                 b1 = new JsonArray();
-                b.add("titulo", new JsonPrimitive("Ver Más"));
+                b.add("titulo", new JsonPrimitive("Visualizar"));
                 String var = "" + obj.get("id").getAsString();
                 b.add("respuesta", new JsonPrimitive("estado_sensor:" + var));
                 b1.add(b);
