@@ -36,4 +36,7 @@ public class Sensors {
     public void add(Sensor s){
         this.sensor.add(s);
     }
+    public void clear(){
+        this.sensor.clear();
+    }
 }

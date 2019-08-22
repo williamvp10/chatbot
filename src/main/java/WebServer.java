@@ -5,7 +5,7 @@ import spark.Request;
 import spark.Response;
 import spark.Route;
 import spark.Spark;
-import chatbot.Chatbot1;
+import chatbot.Chatbot;
 import weatherman.web.utils.ResponseError;
 import static weatherman.web.utils.JSONUtil.*;
 
@@ -21,7 +21,7 @@ public class WebServer {
         Spark.setPort(getHerokuAssignedPort());
         Spark.staticFileLocation("/public");
 
-        final Chatbot1 bot = new Chatbot1();
+        final Chatbot bot = new Chatbot();
 
         get("/", (req, res) -> "Hello World! I am WeatherMan, the weather bot!!");
 
