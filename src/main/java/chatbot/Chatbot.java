@@ -160,6 +160,7 @@ public class Chatbot {
             } else if (type[0].equals("modificar_sensor")) {
                 if (type.length > 1) {
                     user.setSensor(user.getSensors().find(type[1]));
+                    user.getSensor().setTemperatura(""+(Double.parseDouble(user.getSensor().getTemperatura())+2));
                 }
                 findModificar_sensor(user);
             }
