@@ -93,6 +93,8 @@ public class Chatbot {
             if (infouser != null) {
                 userName = infouser.get("first_name").getAsString();
                 this.Usuarios.put(userid, new Usuario(userid, userName));
+            }else{
+                 this.Usuarios.put(userid, new Usuario(userid, "william"));
             }
             System.out.println("user"+infouser);
         }
