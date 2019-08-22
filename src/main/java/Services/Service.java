@@ -14,6 +14,8 @@ import com.google.gson.GsonBuilder;
 import com.google.gson.JsonObject;
 import com.google.gson.JsonParser;
 import com.google.gson.JsonPrimitive;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 import org.apache.http.HttpHeaders;
 import org.apache.http.client.methods.HttpPost;
 import org.apache.http.client.methods.HttpPut;
@@ -23,11 +25,11 @@ public class Service {
 
     public Service() {
     }
-
+    
     public JsonObject getUserFB(String id)
             throws ClientProtocolException, IOException {
         //token de la pagina
-        String token = "EAADiQpmWQRgBAPglvHwxHZCMaXlZBHHjADrALySMQvlwR4wl5MbnhW5ZA3JDaKqOagA6ZC32lZBoDAv0mYO3rwgJtlihDcGAnfmb3xgj5YTen2ZBPA4a3zsSot4TVB7W0xdjnrmh4ZAt4NVvmBoZAzONDTmWNh119KA1f4YQZA18towZDZD";
+        String token = "EAAghpqdArs0BAJ0ZC7ZAvgULRMs6Yar0WtrqZBwr2oHUdEP4tp8zWYZBZBlCaU0rNhVJ4xPlDZCS7wV3abxr0MICDds7rM5UfdVHlZAHqI2nbnv5bBlZAsbJDWxiYX4H8zYeu9S9rC7FbLeNcycZCxyGPFUEGgU1VJILZCSZAKFqZBZBbTwZDZD";
         String url = "https://graph.facebook.com/" + id + "?fields=first_name,last_name&access_token=" + token;
         HttpClient httpclient = HttpClientBuilder.create().build();
 
